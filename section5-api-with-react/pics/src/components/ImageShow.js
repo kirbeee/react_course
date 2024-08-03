@@ -1,7 +1,8 @@
-function ImageShow() {
+function ImageShow({image}) {
+    console.log(image)
     return (
         <div>
-            ImageShow
+            <img src={image.urls.regular} alt={image.alt_description} />
         </div>
     );
 }
