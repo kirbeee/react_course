@@ -21,7 +21,6 @@ function BookCreate({ onCreate }) {
                 <input className="input" value={title} onChange={handleChange} type="text" />
                 <button className="button" >Create</button>
             </form>
-            <h1>BookCreate</h1>
         </div>
     )
 }
