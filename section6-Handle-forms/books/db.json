@@ -1,16 +1,8 @@
 {
   "books": [
     {
-      "title": "The Great Gatsby abc",
+      "title": "test",
       "id": 1
-    },
-    {
-      "title": "12e",
-      "id": 2
-    },
-    {
-      "title": "new",
-      "id": 3
     }
   ]
 }
