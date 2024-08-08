@@ -1,27 +1,24 @@
-import {GoBell} from "react-icons/go";
-import Button from "./Button";
+import Accordion from "./components/Accordion";
 
 function App(){
-    return (
-        <div>
-            <div>
-                <Button primary rounded outline><GoBell className="mr-1"/>Testing</Button>
-            </div>
-            <div>
-                <Button secondary>Testing</Button>
-            </div>
-            <div>
-                <Button success>Testing</Button>
-            </div>
-            <div>
-                <Button warning>Testing</Button>
-            </div>
-            <div>
-                <Button danger>Testing</Button>
-            </div>
-            <h1>App</h1>
-        </div>
-    )
+    const items = [
+    {
+        id:'1',
+        label: "What is React?",
+        content: "React is a front end JavaScript framework"
+    },
+    {
+        id:'2',
+        label: "Why use React?",
+        content: "React is a favorite JS library among engineers"
+    },
+    {
+        id:'3',
+        label: "How do you use React?",
+        content: "You use React by creating components"
+    }
+    ]
+    return <Accordion items={items}/>
 }
 
 export default App
