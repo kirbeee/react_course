@@ -7,8 +7,10 @@ function Dropdown({options, value, onChange}) {
     const divEl = useRef()
 
     useEffect(()=>{
-        if (!divEl.current) return;
+
         const handler = (event)=>{
+            if (!divEl.current)
+                return;
             if (!divEl.current.contains(event.target)){
                 setIsOpen(false)
             }
