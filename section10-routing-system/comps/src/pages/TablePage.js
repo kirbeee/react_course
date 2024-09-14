@@ -28,11 +28,7 @@ function TablePage(){
 
     const keyFn = (fruit) => fruit.name;
 
-    return(
-        <div>
-            <SortableTable data={data} config={config} keyFn={keyFn}/>
-        </div>
-    )
+    return <SortableTable data={data} config={config} keyFn={keyFn}/>
 }
 
 export default TablePage;
