@@ -1,16 +1,16 @@
-function Table({data, config}) {
-    const renderedHeaders = config.map((header) => {
-        return <th key={header.label}>{header.label}</th>
+import { Fragment } from "react";
+
+function Table({data, config, keyFn}) {
+    const renderedHeaders = config.map((column) => {
+        return (column.header) ? <Fragment key={column.label}>{column.header()}</Fragment>: <th key={column.label}>{column.label}</th>
     })
 
-    const renderedRows = data.map((fruit) => {
+    const renderedRows = data.map((rowData) => {
         const renderCells = config.map((column) => {
-            return <td className="p-2" key={column.label}>{column.render(fruit)}</td>
+            return <td className="p-2" key={column.label}>{column.render(rowData)}</td>
         })
         return (
-            <tr className="border-b-2" key={fruit.name}>
-                {renderCells}
-            </tr>
+            <tr className="border-b-2" key={keyFn(rowData)}>{renderCells}</tr>
         )
     })
     return (
