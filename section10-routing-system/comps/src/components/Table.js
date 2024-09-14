@@ -1,23 +1,25 @@
-function Table({data}) {
+function Table({data, config}) {
+    const renderedHeaders = config.map((header) => {
+        return <th key={header.label}>{header.label}</th>
+    })
+
     const renderedRows = data.map((fruit) => {
+        const renderCells = config.map((column) => {
+            return <td className="p-2" key={column.label}>{column.render(fruit)}</td>
+        })
         return (
-            <tr className="border-b" key={fruit.name}>
-                <td className="p-3">{fruit.name}</td>
-                <td className="p-3">
-                    <div className={`p-3 m-2 ${fruit.color}`}></div>
-                </td>
-                <td className="p-3">{fruit.score}</td>
+            <tr className="border-b-2" key={fruit.name}>
+                {renderCells}
             </tr>
-        )})
+        )
+    })
     return (
       <table className="table-auto border-spacing-2">
-          <thaed>
+          <thead>
                 <tr className="border-b-2">
-                    <td>Name</td>
-                    <td>Color</td>
-                    <td>Score</td>
+                    {renderedHeaders}
                 </tr>
-          </thaed>
+          </thead>
           <tbody>
           {renderedRows}
           </tbody>
