@@ -21,8 +21,8 @@ function useSort(data, config) {
                 setSortOrder('asc');
                 setSortBy(label);
                 break;
-                default:
-                    break;
+            default:
+                break;
         }
 
     }
@@ -37,7 +37,7 @@ function useSort(data, config) {
 
             if (typeof valueA === 'string') {
                 return valueA.localeCompare(valueB) * reverseOrder;
-            }else{
+            } else {
                 return (valueA - valueB) * reverseOrder;
             }
         })

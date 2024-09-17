@@ -1,35 +1,32 @@
-import { useState } from "react";
+import {useState} from "react";
 import Modal from '../components/Modal';
 import Button from '../components/Button';
 
-function ModalPage(){
+function ModalPage() {
     const [showModal, setShowModal] = useState(false);
 
     const handleClick = () => {
-        setShowModal(true );
+        setShowModal(true);
     }
 
     const handleClose = () => {
         setShowModal(false);
     }
 
-    const actionBar = (
-        <div>
-        <Button onClick={handleClose} primary >I Accept</Button>
-        </div>)
+    const actionBar = (<div>
+        <Button onClick={handleClose} primary>I Accept</Button>
+    </div>)
     const modal = <Modal onClose={handleClose} actionBar={actionBar}>
         <p>
             This is a modal
         </p>
     </Modal>
-    return(
-        <div className="relative">
+    return (<div className="relative">
             <Button onClick={handleClick} primary>
                 Open Modal
             </Button>
             {showModal && modal}
-        </div>
-    )
+        </div>)
 }
 
 export default ModalPage;
