@@ -1,7 +1,50 @@
 {
-  "users": [{
-    "id": 1,
-    "name": "Leanne Graham"}],
+  "users": [
+    {
+      "id": "1",
+      "name": "Leanne Graham"
+    },
+    {
+      "id": "16b4",
+      "name": "Rudolph Heaney"
+    },
+    {
+      "id": "7761",
+      "name": "Gabriel Gusikowski"
+    },
+    {
+      "id": "1078",
+      "name": "Anita Littel"
+    },
+    {
+      "id": "e1d6",
+      "name": "Clint Hegmann I"
+    },
+    {
+      "id": "464e",
+      "name": "Claire Balistreri"
+    },
+    {
+      "id": "a610",
+      "name": "Ken McClure"
+    },
+    {
+      "id": "aabd",
+      "name": "Dr. Don Hackett"
+    },
+    {
+      "id": "c980",
+      "name": "Gilberto Cummerata"
+    },
+    {
+      "id": "a8b4",
+      "name": "Adrian Wehner"
+    },
+    {
+      "id": "9ede",
+      "name": "Jasmine Sauer Sr."
+    }
+  ],
   "albums": [],
   "photos": []
 }
