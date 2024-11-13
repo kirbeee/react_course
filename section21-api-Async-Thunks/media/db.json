@@ -3,8 +3,28 @@
     {
       "id": "9a51",
       "name": "Mrs. Melba Emard"
+    },
+    {
+      "id": "a4fb",
+      "name": "Fernando Marks"
+    },
+    {
+      "id": "dd85",
+      "name": "Jeffery Wilkinson"
+    },
+    {
+      "id": "123e",
+      "name": "Janet Volkman"
+    },
+    {
+      "id": "bfb5",
+      "name": "Johanna Langworth"
     }
   ],
-  "albums": [],
+  "albums": [{
+    "id": 1,
+    "title": "quidem molestiae enim",
+    "userId": "9a51"
+  }],
   "photos": []
 }
